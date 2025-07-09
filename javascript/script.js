@@ -20,6 +20,13 @@ function playGame(userChoice) {
         result = `Perdiste. ${computerChoice} gana a ${userChoice}`
         computerScore++
     }
+
+    document.getElementById('result').textContent = result
+    document.getElementById('score').textContent = `Jugador ${playerScore} | Computadora ${computerScore}`
+
+    if (playerScore ===3 || computerScore === 3){
+        endGame()
+    }
 }
 
 function endGame() {
