@@ -22,7 +22,7 @@ function playGame(userChoice) {
     }
 
     document.getElementById('result').textContent = result
-    document.getElementById('score').textContent = `Jugador ${playerScore} | Computadora ${computerScore}`
+    document.getElementById('score').textContent = `Jugador: ${playerScore} | Computadora: ${computerScore}`
 
     if (playerScore ===3 || computerScore === 3){
         endGame()
@@ -30,5 +30,9 @@ function playGame(userChoice) {
 }
 
 function endGame() {
-
+    const finalResult = playerScore === 3 ? "Felicidades, has ganado!" : "Lo siento, ha ganado el ordenador"
+    document.getElementById('result').textContent = finalResult
+    document.getElementById('btnPiedra').disabled = true
+    document.getElementById('btnPapel').disabled = true
+    document.getElementById('btnTijera').disabled = true
 }
