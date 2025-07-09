@@ -30,9 +30,32 @@ function playGame(userChoice) {
 }
 
 function endGame() {
-    const finalResult = playerScore === 3 ? "Felicidades, has ganado!" : "Lo siento, ha ganado el ordenador"
+    const finalResult = playerScore === 3 ? "¡Felicidades, has ganado!" : "Lo siento, ha ganado el ordenador"
     document.getElementById('result').textContent = finalResult
+
     document.getElementById('btnPiedra').disabled = true
     document.getElementById('btnPapel').disabled = true
     document.getElementById('btnTijera').disabled = true
+
+    // Solo mostramos el div de reinicio, no llamamos restart()
+    document.getElementById('restart').style.visibility = 'visible'
+}
+
+function restart(respuesta) {
+    if (respuesta === "si") {
+        playerScore = 0
+        computerScore = 0
+
+        document.getElementById('btnPiedra').disabled = false
+        document.getElementById('btnPapel').disabled = false
+        document.getElementById('btnTijera').disabled = false
+
+        document.getElementById('result').textContent = ""
+        document.getElementById('score').textContent = `Jugador: ${playerScore} | Computadora: ${computerScore}`
+
+        document.getElementById('restart').style.visibility = 'hidden'
+    } else {
+        document.getElementById('result').textContent = "¡Gracias por jugar!"
+        document.getElementById('restart').style.visibility = 'hidden'
+    }
 }
