@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #232323;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.choices button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.choices button:hover {
+    background-color: #ddd;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+
+#score {
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+.choices button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
