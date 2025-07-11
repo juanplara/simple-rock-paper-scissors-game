@@ -67,3 +67,9 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
 }
+
+#finalScore {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
